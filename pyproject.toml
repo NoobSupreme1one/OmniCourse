@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnicourse-backend"
+version = "0.1.0"
+description = "OmniCourse backend scaffolding"
+requires-python = ">=3.11"
+dependencies = [
+  "Django>=5.0,<6",
+  "djangorestframework>=3.14,<4",
+  "django-cors-headers>=4.3,<5",
+  "djangorestframework-simplejwt>=5.3,<6",
+  "drf-spectacular>=0.27,<0.28",
+  "python-decouple>=3.8,<4",
+  "whitenoise>=6.6,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black==24.4.2",
+  "isort==5.13.2",
+  "ruff==0.4.8",
+  "mypy==1.10.0",
+  "pytest==8.2.0",
+  "pytest-django==4.8.0",
+  "factory_boy==3.3.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unreachable = true
+exclude = ["^frontend/", "^docs/"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings.dev"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = "-ra"

@@ -1,0 +1,4 @@
+ec430071c7b0f6cef7e54aa8094dd4d3ac680e08c93558cb6942f0704f56067d       157  api.js
+eefb2821dbcad1c89fe15bf8314ca3892fe2270a2dff2942d6e67425b50f1767      1070  imsmanifest.xml
+0a8b8cc40ef8615aecc3ad83585e089288c285e36534cff142e2f7801b3b3ac2       356  lessons/lesson-1.html
+b8e68beb94c23365e70128cf41a2eeeb9192df0d7fe2d976c0cffcc8f8b04f6d       348  lessons/lesson-2.html

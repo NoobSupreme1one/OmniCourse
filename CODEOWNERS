@@ -1,0 +1,22 @@
+# Global owners for the entire repository
+* @team-leads
+
+# Backend code
+backend/ @backend-team @team-leads
+
+# Frontend code  
+frontend/ @frontend-team @team-leads
+
+# Infrastructure and DevOps
+infra/ @devops-team @team-leads
+docker-compose.yml @devops-team
+Dockerfile* @devops-team
+.github/ @devops-team @team-leads
+
+# Documentation
+docs/ @team-leads
+*.md @team-leads
+
+# Security and configuration
+.env.example @security-team @team-leads
+backend/src/core/settings/ @security-team @backend-team
